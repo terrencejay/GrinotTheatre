@@ -1,6 +1,8 @@
 * {
-    border: 1px solid red;
+    /* border: 1px solid red; */
     font-family: Georgia, 'Times New Roman', Times, serif;
+    background-color: black;
+    color: white;
 }
 
 ul {
@@ -21,10 +23,12 @@ nav {
     justify-content: center;
     width: 100%;
     background-color: black;
-    position: fixed;
+    position: absolute;
+    z-index: 1;
     margin-top: 0px;
-    height: 60px;
+    height: 50px;
     color: white;
+    background-color: black;
 }
 .nav-container {
     display: flex;
@@ -68,12 +72,38 @@ a:hover {
     margin-top: -100px;
 }
 
+.container {
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+.email {
+    color: white;
+}
+
+.centered {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    font-size: 65px;
+    background-color: transparent;
+}
+
 .example1 {
     background-image: url(itheater-image-background.png);
     background-position: center;
     background-repeat: no-repeat, repeat;
     padding: 15px;
+    margin-top: 5px;
 }
+
+.concert-container {
+    justify-content: center;
+}
+
 .box {
     object-fit: cover;
     max-width: 300px;
@@ -81,14 +111,57 @@ a:hover {
 
 }
 
-.grid-image {
-    object-fit: cover;
-    max-width: 300px;
-    height: auto;
+.actors {
+    width: 60%;
+    margin-bottom: 20px;
+    padding-left: 20px;
 }
 
 .grid-text {
     text-align: center;
+}
+
+h4 {
+    margin: 30px;
+    color: black;
+    background-color: gray;
+    border: 3px solid black;
+    opacity: 0.5;
+    width: 80%;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.show-info {
+    border-collapse: collapse;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+td,th {
+    border: 1px solid black;
+    text-align: left;
+    padding: 8px;
+}
+
+th {
+    font-weight: 900;
+    text-decoration: underline;
+    padding-right: 80px;
+}
+
+.row-two {
+    border-bottom: 3pt dotted black;
+}
+
+.button {
+    background-color: #FFD700;
+    display: inline-block;
+    border: 2px;
+    padding: 15px;
+
 }
 
 .bottom {
@@ -98,18 +171,23 @@ a:hover {
     display: flex;
     flex-direction: row;
     padding-top: 30px;
+    margin-bottom: 20px;
     justify-content: space-evenly;
 }
 
-.map {
+/* .map {
     border: 1px solid #ddd;
         border-radius: 4px;
         padding: 5px;
         width: 150px;
-}
+} */
 
-.mapimg {
+.maping {
     width: 250px;
+    justify-content: left;
+    padding-top: 50px;
+    padding-right: 20px;
+    background-color: black;
 }
 
 .footinfo {
@@ -117,13 +195,22 @@ a:hover {
     flex-direction: column;
     width: 25%;
     font: 0.6em;
+    vertical-align: top;
+    display: inline-block;
+    padding-left: 50px;
+    padding-top: 20px;
 }
 
-.footshow {
+.location {
+    display: flex;
+    flex-direction: column;
+}
+.footshows {
     display: flex;
     flex-direction: column;
     width: 25%;
     font: 0.6em;
+    color: white;
 }
 
 .social {
@@ -131,8 +218,21 @@ a:hover {
     flex-direction: column;
     width: 25%;
     font: 0.6em;
+    vertical-align: top;
 }
 
 .foothead {
-    font-size: 2em;
+    font-size: 30px;
+    display: flex;
+    padding-left: 30px;
 }
+
+.tiny {
+    margin: 3px;
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+    padding-left: 30px;
+    padding-top: 20px;
+}
+
